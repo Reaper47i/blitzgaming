@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Poiret+One&display=swap");
+
 * {
   margin: 0;
   border: 0;
@@ -5,17 +7,52 @@
   box-sizing: border-box;
 }
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --main-font: "Exo 2", sans-serif;
+  --sec-font: "Poiret One", cursive;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --bg-nav: #fff8f0;
+  --color-font: #373737;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+/* utils */
+.flx-ac-jc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flx-ac-jsa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  width: 100vw;
+  height: 8vh;
+  gap: 1rem;
+  background-color: var(--bg-nav);
+}
+nav ul {
+  width: 70%;
+  gap: 1rem;
+  list-style: none;
+  color: var(--color-font);
+}
+
+nav ul li {
+  font-family: var(--main-font);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.sec1 {
+  background-color: aqua;
+  width: 100%;
+  height: calc(100vh - 20vh);
 }
