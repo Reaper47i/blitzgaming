@@ -1,8 +1,10 @@
 import "./style.css";
+import logo from "/logo/logo.svg?url";
 
-const elm = document.querySelector("#content");
-const logoElm = document.querySelector("#logo");
+const elm = document.querySelector("#content"); // content page element
+const logoElm = document.querySelector("#logo"); // logo element
 
+// function for creating tempelates and adding them =>
 function elementFromHtml(html) {
   const template = document.createElement("template");
   template.innerHTML = html.trim();
@@ -10,6 +12,8 @@ function elementFromHtml(html) {
 }
 
 // elm.appendChild(body);
+
+// adding logo element =>
 logoElm.appendChild(
   elementFromHtml(`
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -36,3 +40,6 @@ fill="#92140c" stroke="none">
 </g>
 </svg>`)
 );
+// logoElm.appendChild(elementFromHtml(logo));
+
+// console.log(window.innerWidth, window.innerHeight);

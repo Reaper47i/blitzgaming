@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Josefin+Sans:ital,wght@0,400;1,300;1,400&family=Poiret+One&display=swap");
 
 * {
   margin: 0;
@@ -9,8 +9,9 @@
 :root {
   --main-font: "Exo 2", sans-serif;
   --sec-font: "Poiret One", cursive;
+  --ter-font: "Josefin Sans", sans-serif;
 
-  --bg-nav: #fff8f0;
+  --bg-col1: #fff8f0;
   --color-font: #373737;
 }
 
@@ -34,25 +35,54 @@ body {
 
 nav {
   width: 100vw;
-  height: 8vh;
-  gap: 1rem;
-  background-color: var(--bg-nav);
+  height: 10 vh;
+  padding: 1rem 0;
+  gap: 0.5rem;
+  background-color: var(--bg-col1);
+  z-index: 9999;
 }
 nav ul {
   width: 70%;
-  gap: 1rem;
+  /* gap: 1rem; */
   list-style: none;
   color: var(--color-font);
 }
 
 nav ul li {
   font-family: var(--main-font);
-  font-size: 1.3rem;
+  font-size: calc(1vw + 6px);
   font-weight: 600;
 }
 
 .sec1 {
-  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 5rem;
+  position: relative;
+  z-index: -1;
+  background-color: var(--bg-col1);
   width: 100%;
   height: calc(100vh - 20vh);
+}
+
+.sec1 img {
+  position: static;
+  height: 550px;
+  /* overflow-x: hidden; */
+  /* block-size: auto; */
+  object-fit: cover;
+  width: 70%;
+  object-position: right;
+}
+
+/* landing page sec1 pic and left icon  */
+.bannerBox {
+  min-height: 300px;
+  position: relative;
+  right: -50px;
+  background-color: red;
+  padding: 1rem;
+  font-size: 2rem;
+  font-family: var(--ter-font);
 }
