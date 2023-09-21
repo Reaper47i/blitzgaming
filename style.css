@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Josefin+Sans:ital,wght@0,400;1,300;1,400&family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Josefin+Sans:ital,wght@0,400;1,300;1,400&family=Kanit:wght@200;400;700;800;900&family=Poiret+One&display=swap");
 
 * {
   margin: 0;
@@ -12,80 +12,57 @@
 h2 {
   font-size: calc(2vh + 6px);
 } */
+
+/* font-family: 'Exo 2', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Poiret One', cursive; */
 :root {
-  --main-font: "Exo 2", sans-serif;
-  --sec-font: "Poiret One", cursive;
-  --ter-font: "Josefin Sans", sans-serif;
+  --font1: "Exo 2", sans-serif;
+  --font2: "Poiret One", cursive;
+  --font3: "Josefin Sans", sans-serif;
+  --font4: "Kanit", sans-serif;
 
   --bg-col1: #fff8f0;
   --color-font: #373737;
 }
 
-/* utils */
-.flx-ac-jc {
+/* navbar */
+
+nav {
+  background-color: var(--bg-col1);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem 0;
+  gap: 1rem;
+  height: max-content;
 }
 
-.flx-ac-jsa {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  width: 100vw;
+.logo {
+  width: fit-content;
   height: fit-content;
-  padding: 1rem;
-  gap: 0.5rem;
-  background-color: var(--bg-col1);
-  z-index: 9999;
-}
-nav ul {
-  width: 100%;
-  /* gap: 1rem; */
-  list-style: none;
-  color: var(--color-font);
 }
 
-nav ul li {
-  font-family: var(--main-font);
-  font-size: calc(1vw + 6px);
+.logo img {
+  height: 3vh;
+}
+
+.links {
+  display: flex;
+  /* align-items: end;
+  justify-content: end; */
+  width: fit-content;
+  height: 100%;
+  gap: 1rem;
+}
+.items {
+  width: fit-content;
+  height: 100%;
+  font-family: var(--font1);
+  font-size: 1.2rem;
   font-weight: 600;
 }
-#bodySections {
-  width: 100vw;
-  height: fit-content;
-  margin-top: 10vh;
-}
-section {
-  z-index: -1;
-  width: 100vw;
-  height: calc(100vh - 10vh);
-  background-color: aqua;
-  /* margin-top: 10vh; */
-}
-
-/* different sections */
-
-.sec1 {
-  padding-top: 1rem;
-  position: relative;
-}
-
-.sec1 img {
-  position: absolute;
-  right: 0;
-  width: 80%;
-  height: calc(100vh - 10vh - 20vh);
-  object-fit: cover;
-  object-position: right;
+.items:hover {
+  cursor: pointer;
 }
